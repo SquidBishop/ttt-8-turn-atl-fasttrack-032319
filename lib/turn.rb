@@ -8,9 +8,14 @@ end
 
 def input_to_index(user_input)
     (user_input.to_i) - 1
+  end
+
+def move(board, index, token = "X")
+  board[index] = token
+end
 
 def valid_move?(board, index)
-  if !index.between?(0,8), && !position_taken?(board, taken)
+  if index.between?(0,8), && !position_taken?(board, taken)
     true
   else
   false
